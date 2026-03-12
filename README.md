@@ -22,21 +22,31 @@ The final system creates a **multi-stage cybersecurity detection pipeline** capa
 
 The detection pipeline follows a **three-stage hybrid architecture**:
 
-```
-Incoming Network Packet
-          │
-          ▼
-Isolation Forest
-(Unknown Anomaly Detection)
-          │
-          ▼
-XGBoost Classifier
-(Normal vs Attack Detection)
-          │
-          ▼
-Decision Tree Multiclass Classifier
-(Identify Specific Attack Type)
-```
+                Incoming Network Traffic
+                          │
+                          ▼
+              +-------------------------+
+              |   Isolation Forest      |
+              |  (Anomaly Detection)    |
+              | Detect Unknown Attacks  |
+              +-------------------------+
+                          │
+                          ▼
+              +-------------------------+
+              |       XGBoost           |
+              | Binary Classification   |
+              |  Normal vs Attack       |
+              +-------------------------+
+                          │
+                          ▼
+              +-------------------------+
+              |     Decision Tree       |
+              | Multiclass Classifier   |
+              | Identify Attack Type    |
+              +-------------------------+
+                          │
+                          ▼
+                   Final Detection
 
 ### Stage 1 – Anomaly Detection
 
