@@ -286,6 +286,15 @@ Accuracy:
 
 ---
 
+## Model Performance Comparison
+
+| Model | Accuracy |
+|------|---------|
+| Logistic Regression | ~99.7% |
+| Decision Tree | ~99.98% |
+| Random Forest | ~99.97% |
+| XGBoost | ~99.99% |
+
 # Phase 6 — Multiclass Attack Classification
 
 A separate model was trained to identify **specific attack types**.
@@ -432,7 +441,7 @@ hybrid-nids-anomaly-detection
 Clone repository:
 
 ```
-git clone https://github.com/yourusername/hybrid-nids-anomaly-detection.git
+git clone https://github.com/poojaprajapat0703-byte/Hybrid-Nids-Anomaly-Detection.git
 ```
 
 Install dependencies:
